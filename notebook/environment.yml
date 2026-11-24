@@ -1,0 +1,22 @@
+# Conda environment for GSE44994_CNV_analysis.ipynb
+# Apple Silicon: create with CONDA_SUBDIR=osx-64 (Bioconductor array packages are not built for osx-arm64; runs under Rosetta).
+name: gse44994
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - ipykernel
+  - nbconvert
+  - r-base=4.5.3
+  - r-data.table=1.18.6.1
+  - bioconductor-oligo=1.74.0
+  - bioconductor-oligoclasses=1.72.0
+  - bioconductor-crlmm=1.68.0
+  - bioconductor-dnacopy=1.86.0
+  - bioconductor-affxparser=1.82.0
+  - bioconductor-preprocesscore=1.72.0
+# installed from source inside the notebook (setup cell):
+#   pd.mapping250k.nsp 3.12.0 (Bioconductor annotation, ~350 MB) and copynumber (GitHub igordot/copynumber)
